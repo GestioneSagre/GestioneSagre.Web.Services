@@ -8,7 +8,7 @@ public class SupportoService : ISupportoService
 {
     private HttpClient httpClient;
 
-    private string PrivateAPI = Settings.privateAPI;
+    private string HostWebAPI = Settings.publicAPI;
 
     public SupportoService(HttpClient httpClient)
     {
@@ -17,7 +17,7 @@ public class SupportoService : ISupportoService
 
     public async Task InvioEmailSupporto(InputMailSender inputModel)
     {
-        var response = await httpClient.PostAsJsonAsync($"{PrivateAPI}/api/Email/InvioEmail", inputModel);
+        var response = await httpClient.PostAsJsonAsync($"{HostWebAPI}/api/Email/InvioEmail", inputModel);
 
         if (!response.IsSuccessStatusCode)
         {

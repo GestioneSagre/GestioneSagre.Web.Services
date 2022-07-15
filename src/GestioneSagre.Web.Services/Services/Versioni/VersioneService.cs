@@ -9,7 +9,7 @@ public class VersioneService : IVersioneService
     private HttpClient httpClient;
 
     private string Versione = Settings.versione;
-    private string PrivateAPI = Settings.privateAPI;
+    private string HostWebAPI = Settings.publicAPI;
 
     public VersioneViewModel testoVersione { get; set; }
 
@@ -20,7 +20,7 @@ public class VersioneService : IVersioneService
 
     public async Task<VersioneViewModel> GetVersione()
     {
-        testoVersione = await httpClient.GetFromJsonAsync<VersioneViewModel>($"{PrivateAPI}/api/versione/{Versione}");
+        testoVersione = await httpClient.GetFromJsonAsync<VersioneViewModel>($"{HostWebAPI}/api/versione/{Versione}");
 
         return testoVersione;
     }
