@@ -1,6 +1,5 @@
 ﻿using System.Net.Http.Json;
 using GestioneSagre.Models.ViewModels.Versioni;
-using GestioneSagre.Web.Services.Configuration;
 
 namespace GestioneSagre.Web.Services.Services.Versioni;
 
@@ -8,8 +7,7 @@ public class VersioneService : IVersioneService
 {
     private HttpClient httpClient;
 
-    private string Versione = Settings.versione;
-    private string HostWebAPI = Settings.publicAPI;
+    private string Versione = "08da4afe-6f26-d449-753a-8e553407828b";
 
     public VersioneViewModel testoVersione { get; set; }
 
@@ -20,7 +18,7 @@ public class VersioneService : IVersioneService
 
     public async Task<VersioneViewModel> GetVersione()
     {
-        testoVersione = await httpClient.GetFromJsonAsync<VersioneViewModel>($"{HostWebAPI}/api/versione/{Versione}");
+        testoVersione = await httpClient.GetFromJsonAsync<VersioneViewModel>($"/api/versione/{Versione}");
 
         return testoVersione;
     }
