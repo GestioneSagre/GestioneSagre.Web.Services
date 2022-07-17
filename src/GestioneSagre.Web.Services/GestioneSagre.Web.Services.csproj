@@ -10,10 +10,10 @@
         <TargetFrameworks>net6.0</TargetFrameworks>
         <Authors>Angelo Pirola</Authors>
         <Company>Gestione Sagre</Company>
-        <Product>Gestione Sagre Web</Product>
-        <Title>Gestione Sagre Web</Title>
-        <Description>GestioneSagre Deprecated</Description>
-        <PackageTags>gestione sagre web library deprecated not use</PackageTags>
+        <Product>Gestione Sagre Web Services Library</Product>
+        <Title>Gestione Sagre Web Services Library</Title>
+        <Description>GestioneSagre Web Services Library components</Description>
+        <PackageTags>gestione sagre web services library csharp net netcore web opensource</PackageTags>
         <PackageIcon>Library.png</PackageIcon>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -32,7 +32,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="GestioneSagre.Models" Version="1.0.10" />
+        <PackageReference Include="GestioneSagre.Models" Version="1.0.11" />
         <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.108">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
