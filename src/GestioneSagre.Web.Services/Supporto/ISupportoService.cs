@@ -4,5 +4,5 @@ namespace GestioneSagre.Web.Services.Supporto;
 
 public interface ISupportoService
 {
-    Task InvioEmailSupporto(InputMailSender input);
+    Task InvioEmailSupporto(InputMailSupportoSender input);
 }
