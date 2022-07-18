@@ -12,9 +12,9 @@ public class SupportoService : ISupportoService
         this.httpClient = httpClient;
     }
 
-    public async Task InvioEmailSupporto(InputMailSupportoSender inputModel)
+    public async Task InvioEmailSupportoAsync(InputMailSupportoSender inputModel)
     {
-        var response = await httpClient.PostAsJsonAsync($"/api/Email/InvioEmail", inputModel);
+        var response = await httpClient.PostAsJsonAsync($"/api/Email/InvioEmailSupporto", inputModel);
 
         if (!response.IsSuccessStatusCode)
         {
